@@ -1,4 +1,3 @@
-import fs from 'fs'
 import {retext} from 'retext'
 import retextNoEmojis from './index.js'
 
