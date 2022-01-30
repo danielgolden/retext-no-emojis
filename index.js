@@ -1,11 +1,6 @@
 import { visit } from 'unist-util-visit';
 import { is, convert } from 'unist-util-is';
 import { pointStart, pointEnd } from 'unist-util-position'
-import { contractions } from './contractions-list.js'
-import { toString } from 'nlcst-to-string'
-
-const sentence = convert('SentenceNode')
-const whiteSpace = convert('WhiteSpaceNode')
 
 export default function retextNoEmojis() {
   return (tree, file) => {
@@ -38,7 +33,7 @@ export default function retextNoEmojis() {
                     {start: pointStart(sentenceChild), end: pointEnd(sentenceChild)},
                     [source, sentenceChild.value].join(':')
                   ),
-                  {actual, expected, note: '', url: 'https://one-core.datanerd.us/foundation/design/writing/contractions/'}
+                  {actual, expected, note: '', url: 'https://one-core.datanerd.us/foundation/design/writing/emojis/'}
                 )
                 return file
               }

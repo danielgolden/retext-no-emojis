@@ -1,6 +1,6 @@
 # retext-no-emojis
 
-A [retext](https://github.com/retextjs/retext) plugin to encourage the usage of common contractions.
+A [retext](https://github.com/retextjs/retext) plugin to discourage the usage of emoji(s).
 
 ## Install
 
