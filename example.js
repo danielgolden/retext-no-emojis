@@ -6,5 +6,4 @@ retext()
   .process('This is some text ✨ with emojis 😂 sprinkled in 😏. What is the plural of emoji anyway 🧐? 🤷🏽')
   .then((text) => {
     console.error(text.messages)
-    console.log(text);
   })

@@ -21,7 +21,6 @@ retext()
   )
   .then((text) => {
     console.error(text.messages);
-    console.log(text);
   });
 ```
 
