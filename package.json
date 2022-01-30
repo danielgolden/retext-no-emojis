@@ -1,6 +1,6 @@
 {
   "name": "retext-no-emojis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A retext plugin for discouraging the usage of emoji(s). Meant for use in writing style guides.",
   "type": "module",
   "main": "index.js",
