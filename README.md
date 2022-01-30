@@ -12,16 +12,16 @@ npm install retext-no-emojis
 
 ```js
 import { retext } from "retext";
-import { reporter } from "vfile-reporter";
-import retextStringify from "retext-stringify";
-import retextNoEmojis from "retext-no-emojis";
+import retextNoEmojis from "./index.js";
 
 retext()
   .use(retextNoEmojis)
-  .use(retextStringify)
-  .process("These are not the droids you are looking for")
-  .then((report) => {
-    console.error(reporter(file));
+  .process(
+    "This is some text ✨ with emojis 😂 sprinkled in 😏. What is the plural of emoji anyway 🧐? 🤷🏽"
+  )
+  .then((text) => {
+    console.error(text.messages);
+    console.log(text);
   });
 ```
 
