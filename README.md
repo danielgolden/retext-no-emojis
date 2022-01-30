@@ -16,9 +16,7 @@ import retextNoEmojis from "./index.js";
 
 retext()
   .use(retextNoEmojis)
-  .process(
-    "This is some text ✨ with emojis 😂 sprinkled in 😏. What is the plural of emoji anyway 🧐? 🤷🏽"
-  )
+  .process("This is some text ✨ with emojis 😂 sprinkled in 😏.")
   .then((text) => {
     console.error(text.messages);
   });
