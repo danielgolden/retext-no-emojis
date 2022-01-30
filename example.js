@@ -1,11 +1,11 @@
 import fs from 'fs'
 import {retext} from 'retext'
-// import {reporter} from 'vfile-reporter-json'
 import retextNoEmojis from './index.js'
 
 retext()
   .use(retextNoEmojis)
-  .process('I💐 c👋🏽an not see you.')
+  .process('This is some text ✨ with emojis 😂 sprinkled in 😏. What is the plural of emoji anyway 🧐? 🤷🏽')
   .then((text) => {
     console.error(text.messages)
+    console.log(text);
   })

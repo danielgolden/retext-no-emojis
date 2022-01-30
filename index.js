@@ -14,6 +14,7 @@ export default function retextNoEmojis() {
       const sentences = node.children
       const source = 'retext-no-emojis'
       let ruleId = ''
+      const expected = ['']
 
       // for each sentence
       sentences.forEach((sentence, index) => {
@@ -25,7 +26,7 @@ export default function retextNoEmojis() {
             // if it's a word
             if (is(sentenceChild, 'SymbolNode')) {
               // Want to know what this little glorious snippet does?
-
+              // https://stackoverflow.com/questions/18862256/how-to-detect-emoji-using-javascript
               let matches = /\p{Extended_Pictographic}/u.test(sentenceChild.value)
 
               if (matches) {
@@ -33,11 +34,11 @@ export default function retextNoEmojis() {
                 
                 Object.assign(
                   file.message(
-                    `Expected "" not "${actual}"`,
+                    `Expected nothing, not "${actual}"`,
                     {start: pointStart(sentenceChild), end: pointEnd(sentenceChild)},
                     [source, sentenceChild.value].join(':')
                   ),
-                  {actual, expected: '', note: '', url: 'https://one-core.datanerd.us/foundation/design/writing/contractions/'}
+                  {actual, expected, note: '', url: 'https://one-core.datanerd.us/foundation/design/writing/contractions/'}
                 )
                 return file
               }
