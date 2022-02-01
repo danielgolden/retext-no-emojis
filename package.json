@@ -16,7 +16,7 @@
     "unifiedjs",
     "natural language",
     "natural language processing",
-    "retext plugin"
+    "retext-plugin"
   ],
   "author": "Daniel Golden",
   "bugs": "https://github.com/danielgolden/retext-no-emojis/issues",
